@@ -1,15 +1,6 @@
-import { useState, useEffect } from "react";
 import Character from "./character";
 
 export default function Home() {
-  const [didMount, setDidMount] = useState(false);
-
-  useEffect(() => {
-    setDidMount(true);
-  }, []);
-
-  if (!didMount) return null;
-
   return (
     <main>
       <div
