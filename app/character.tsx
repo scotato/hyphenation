@@ -372,13 +372,13 @@ function randomCharacter() {
 
   return {
     metadata: {
-      hat: hat ? `  ${hat}  ` : "none",
-      face: ` ${eye}${mouth}${eye} `,
+      hat: hat || "none",
+      face: `${eye}${mouth}${eye}`,
       head: `${headLeft}   ${headRight}`,
       arms: `${armLeft}   ${armRight}`,
-      body: ` ${bodyLeft} ${bodyRight} `,
+      body: `${bodyLeft} ${bodyRight}`,
       emblem: chest || "none",
-      legs: `${footLeft}${legLeft}   ${legRight}${footRight}`,
+      legs: `${footLeft}${legLeft} ${legRight}${footRight}`,
     },
     matrix: [
       ["", "", hat, "", ""],
