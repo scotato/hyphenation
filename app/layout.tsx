@@ -1,7 +1,7 @@
 import "./globals.css";
-import { Chivo_Mono } from "next/font/google";
+import { Martian_Mono } from "next/font/google";
 
-const chivomono = Chivo_Mono({ subsets: ["latin"] });
+const martianMono = Martian_Mono({ subsets: ["latin"] });
 
 export const metadata = {
   title: "hyphenation",
@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={chivomono.className}>{children}</body>
+      <body className={martianMono.className}>{children}</body>
     </html>
   );
 }

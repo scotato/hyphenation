@@ -74,22 +74,23 @@ export default function Character() {
   if (!didMount) return null;
 
   return (
-    <svg viewBox="0 0 32 32">
-      <text x="4" y="10px" fontSize={8} fontWeight={900}>
+    <svg viewBox="0 0 64 64">
+      <rect x="0" y="0" width="64" height="64" fill="white" />
+      <text x="24" y="28px" fontSize={4} fontWeight={900}>
         {headLeft}
         {eyeLeft}
         {mouth}
         {eyeRight}
         {headRight}
       </text>
-      <text x="4" y="18px" fontSize={8} fontWeight={900}>
+      <text x="24" y="34px" fontSize={4} fontWeight={900}>
         {armLeft}
         {bodyLeft}
         {chest}
         {bodyRight}
         {armRight}
       </text>
-      <text x="4" y="26px" fontSize={8} fontWeight={900}>
+      <text x="24" y="40px" fontSize={4} fontWeight={900}>
         {footLeft}
         {legLeft} {legRight}
         {footRight}
