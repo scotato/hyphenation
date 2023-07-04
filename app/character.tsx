@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 
 const heads = [
   ["|", "|"],
@@ -16,7 +17,6 @@ const eyes = [
   ["O", "o"],
   ["O", "O"],
   ["0", "0"],
-  ["@", "@"],
   ["#", "#"],
   ["+", "+"],
   ["'", "'"],
@@ -29,28 +29,23 @@ const eyes = [
   ["X", "X"],
 ];
 
-const mouths = ["_", "."];
+const mouths = ["-"];
 
 const arms = [
   ["/", "\\"],
-  ["\\", "/"],
-  ["\\", "/"],
-  ["-", "-"],
   ["<", ">"],
   ["~", "~"],
+  ["{", "}"],
   ["J", "L"],
-  ["!", "!"],
-  ["q", "p"],
   ["2", "7"],
 ];
 
 const bodies = [
   ["[", "]"],
-  ["{", "}"],
   ["(", ")"],
 ];
 
-const chests = [" ", ":", "Y"];
+const chests = [" ", ":", "*", "=", "."];
 
 const legs = [
   ["|", "|"],
@@ -62,6 +57,7 @@ const legs = [
 const feet = [["_", "_"]];
 
 export default function Character() {
+  const [didMount, setDidMount] = useState(false);
   const [headLeft, headRight] = randomFromArray(heads);
   const [eyeLeft, eyeRight] = randomFromArray(eyes);
   const mouth = randomFromArray(mouths);
@@ -70,6 +66,12 @@ export default function Character() {
   const chest = randomFromArray(chests);
   const [legLeft, legRight] = randomFromArray(legs);
   const [footLeft, footRight] = randomFromArray(feet);
+
+  useEffect(() => {
+    setDidMount(true);
+  }, []);
+
+  if (!didMount) return null;
 
   return (
     <svg viewBox="0 0 32 32">
