@@ -20,3 +20,7 @@ main {
   align-items: center;
   justify-content: center;
 }
+
+svg {
+  height: 100%;
+}

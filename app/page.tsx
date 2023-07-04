@@ -6,13 +6,14 @@ export default function Home() {
       <div
         style={{
           display: "flex",
+          alignItems: "center",
           padding: 32,
-          aspectRatio: "1/1",
+          gap: 32,
           maxWidth: "100%",
           height: "100%",
         }}
       >
-        <Character />
+        <Character showMetadata />
       </div>
     </main>
   );
